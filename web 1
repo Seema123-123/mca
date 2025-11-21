@@ -1,0 +1,35 @@
+
+Write a PHP program to insert the details entered by the user in the Registration form into MySQL database
+
+
+<html>
+<title>Registration Page</title>
+beat
+<body>
+<h1> Registration Page</h1>
+<br>
+form action "imert.php" method="post">
+Name <input type="text" name="tsame" id="Thame" value="name" /><br />
+Passwond <input type="password" name="pwd" id="pwd" value="password" chr
+Email <input type="text" name="email" id="email" value="email@example.com"/><br/>
+Phone Number <input type="text" name="ph" id="ph" value="9999999999" maxlength="10"><br
+<input type="submit" value="Submit"
+fomm
+body
+<html>
+
+Insert.php
+<?php>
+Sconmysqli connect("Incalhost", "root", "root", "srikanth");
+if (!Scon)
+dier Could not connect: mysql emor());
+mysql select_db("ivese", Soon):
+Sl="INSERT INTO login (name, password, eruul, pino)
+VALUES
+(S_POST[fname]5_POST[pwd].S_POST[email]','$_POST[ph])"
+if (!mysqli query(Scon,Soul))
+die('Error: mysqli_error());
+echo "I record added";
+echo "<hr><br>";
+echo "You want to register another user, Click <a href="register.html">here</a>
+mysqli close(Scrn);

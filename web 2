@@ -1,0 +1,32 @@
+Retrieve.Html
+
+<html>
+head-title-loginpage Aitle head
+<body
+<center><br><br><br><h1><font size="22" color="punk"><Login Page</font></hi></i>
+<form action="retrieve.jsp" name="log" id="la" onSubmit="retum validate()" action="#" method="post">
+table-ad-Login it: <ul><input type="text" name="login" size="10"><span id = "s1" ></span></td></tr>
+<tr><td>Password:</td><td><input type="password" name="pwd" size="10"><span id = "s2" ></span></td></tr>
+<tr><td><input type="submit" value="Login"><td><td><input type="reset" value="reset">/td></tr></table>
+<form>
+<body>
+<html>
+
+
+Extrieve.jsp
+
+<%@ page import java.sql.
+<html>
+<body>
+<%
+String uname=request.getParameter("login");
+String pwderequest getParameter("pwd"); 
+try{
+Class.forName("coan.mysql.jdbc.Driver"); 
+Connection con-DriverManager.getConnection("jdbc:mysql://localhost:3306/srunanth", "root","");
+PreparedStatement p = con.prepareStatement("select * from student");
+p.setString(1.uname)
+p.setString(2.pwd):
+if(uname==Email && pwd==Password)(
+response.sendRedirect("welcome.jsp");
+}

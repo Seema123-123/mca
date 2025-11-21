@@ -20,16 +20,22 @@ body
 
 Insert.php
 <?php>
-Sconmysqli connect("Incalhost", "root", "root", "srikanth");
-if (!Scon)
-dier Could not connect: mysql emor());
-mysql select_db("ivese", Soon):
-Sl="INSERT INTO login (name, password, eruul, pino)
+$con = mysqli_connect("Incalhost", "root", "root", "srikanth");
+if (!$con)
+{
+die("Could not connect:", mysql error());
+};
+mysql select_db("ivese", $con):
+
+$Sql="INSERT INTO login (name, password, email, phone)
 VALUES
-(S_POST[fname]5_POST[pwd].S_POST[email]','$_POST[ph])"
-if (!mysqli query(Scon,Soul))
+($_POST[fname]"$_POST[pwd]".S_POST[email]','$_POST[ph])"
+
+if (!mysqli query($con,$sql))
+{
 die('Error: mysqli_error());
+}
 echo "I record added";
 echo "<hr><br>";
 echo "You want to register another user, Click <a href="register.html">here</a>
-mysqli close(Scrn);
+mysqli close($con);
